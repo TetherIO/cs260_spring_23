@@ -34,7 +34,7 @@
    python.)
 2. Designing/analyzing algorithms and implementing them in C/C++.
 3. Theory of computing in general, automata, computability, complexity theory, algorithms, languages, etc.
-4. Parallelism (cloud and stuff like data mining) and understanding what's going on at the hardware/software level.
+4. Parallelism (cloud especially) and understanding what's going on at the hardware/software level.
 5. Operating systems, perhaps simply because I've always been intimidated by the expertise and knowledge of the
    adults when I was a kid, those that were around during the real renaissance moments of computing. Growing up in the 90s, my 
    Macintosh IIci was bigger than the world, a ~~black~~ white box of hollywood style hacking intrigue. Operating systems and the
