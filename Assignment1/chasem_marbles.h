@@ -31,6 +31,12 @@ private:
 class Jar {
 
 public:
+    vector<Marble> _marbleJar;
+
+    void addMarble(const Marble& marble) {
+        _marbleJar.push_back(marble);
+    }
+
 
 
 };
