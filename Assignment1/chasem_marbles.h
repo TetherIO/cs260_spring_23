@@ -37,6 +37,12 @@ public:
         _marbleJar.push_back(marble);
     }
 
-
+    void listMarbles() const {
+        for (const Marble& marble : _marbleJar) {
+            std::cout << "Color: " << marble.getColor()
+                      << ", Style: " << marble.getStyle()
+                      << ", Size: " << marble.getSize() << std::endl;
+        }
+    }
 
 };
