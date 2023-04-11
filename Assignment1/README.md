@@ -5,3 +5,4 @@ The purpose of this assignment was to represent a marble and bag (in my case a j
 
 This is my first c++ program in 10+ years -- which required a lot of looking up of concepts and reading from Tony Gaddis' Starting Out with C++ textbook. I can reimplement in Python if it's too basic.
 
+![]([https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png](https://github.com/TetherIO/cs260_spring_23/blob/main/Assignment1/MaxChaseAssignment1Design.jpg?raw=true) | width=100)
