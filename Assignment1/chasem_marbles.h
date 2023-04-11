@@ -6,6 +6,8 @@
 #include <iostream>
 #include <string>
 #include <vector> // contiguous memory structure
+#include <random>
+#include <algorithm>
 
 using namespace std;
 
@@ -43,12 +45,20 @@ public:
         return _marbleRemoved;
     }
 
-    void listMarbles() const {
-        for (const Marble& marble : _marbleJar) {
+    void listMarbles() {
+        for (const Marble& marble : _marbleJar) {   //const reference "read only"
             std::cout << "Color: " << marble.getColor()
                       << ", Style: " << marble.getStyle()
-                      << ", Size: " << marble.getSize() << std::endl;
+                      << ", Size: " << marble.getSize() << "mm" << std::endl;
         }
+    }
+
+    void shakeJar() {
+
+        random_device rd;
+        mt19937 randomNumber(rd());
+
+        shuffle(_marbleJar.begin(), _marbleJar.end(), randomNumber);
     }
 
 private:
