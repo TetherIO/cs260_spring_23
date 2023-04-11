@@ -31,10 +31,16 @@ private:
 class Jar {
 
 public:
-    vector<Marble> _marbleJar;
+
 
     void addMarble(const Marble& marble) {
         _marbleJar.push_back(marble);
+    }
+
+    Marble removeMarble() {
+        Marble _marbleRemoved = _marbleJar.back();
+        _marbleJar.pop_back();
+        return _marbleRemoved;
     }
 
     void listMarbles() const {
@@ -44,5 +50,9 @@ public:
                       << ", Size: " << marble.getSize() << std::endl;
         }
     }
+
+private:
+    vector<Marble> _marbleJar;
+
 
 };
