@@ -25,7 +25,7 @@ Queue should hold int? values, should be somewhat dynamic, should follow FIFO or
 - Node struct or class
 	* holds two values
 		- data held
-		- pointer to next node
+		- address of next node
 	* ends with ;
 
 - Queue structure
@@ -84,3 +84,19 @@ Queue should hold int? values, should be somewhat dynamic, should follow FIFO or
 - Testing centered around returning the entire list in order? accessing the value of at a certain index? accessing an empty list?
 - Code backed up using git/github
 		
+### Breaking Down the Problem
+
+- Node struct/class
+	* holds two values
+		- data
+		- address of 'next' node
+
+- List structure
+	* One node attribute pointing head node
+		- head node initiliazed to null
+	
+	* add element(n)
+		- receives an index value (n)
+		- receives a value for the element at position n
+		- creates a new node with value and null address
+		- 
