@@ -29,7 +29,7 @@ Queue should hold int? values, should be somewhat dynamic, should follow FIFO or
 	* ends with ;
 
 - Queue structure
-	* two node attributes/data members to keep track of beginning and ending elements
+	* two node attributes/data members (values) to keep track of beginning and ending elements
 		- "head" pointer is initialized as null
 		- "last" pointer is initialized as null
 
@@ -61,4 +61,26 @@ Queue should hold int? values, should be somewhat dynamic, should follow FIFO or
 5. values added to that object using push/add method
 6. values peeked with method
 7. values removed with method
+
+
+## List design
+
+### Goal:
+
+- Implement a list structure that allows for placement of an element at the nth position of the list. 
+
+### Requirements
+
+- List should hold some kind of type, possibly int based on class sessions, and should be dynamic (linked list) vs array.
+
+### Tools/Targets/Backup
+
+- Again, no OS requirements, should compile using c++ 11 standards for the purpose of the class
+- Again, using a code editor and the g++ compiler running on various operating systems between class and home: arch linux/windows/mac OS
+- C++ language specifics
+	* structs vs classes decision
+	* use of pointers
+	* looping to reach a certain position
+- Testing centered around returning the entire list in order? accessing the value of at a certain index? accessing an empty list?
+- Code backed up using git/github
 		
