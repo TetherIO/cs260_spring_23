@@ -25,7 +25,7 @@ Queue should hold int? values, should be somewhat dynamic, should follow FIFO or
 - Node struct or class
 	* holds two values
 		- data held
-		- address of next node
+		- address of next node (node pointer)
 	* ends with ;
 
 - Queue structure
@@ -89,7 +89,7 @@ Queue should hold int? values, should be somewhat dynamic, should follow FIFO or
 - Node struct/class
 	* holds two values
 		- data
-		- address of 'next' node
+		- address of 'next' node (node pointer)
 
 - List structure
 	* One node attribute pointing head node
@@ -98,5 +98,20 @@ Queue should hold int? values, should be somewhat dynamic, should follow FIFO or
 	* add element(n)
 		- receives an index value (n)
 		- receives a value for the element at position n
+		- loops through linked list to determine if index is valid
+			* if position is valid, node->next shouldn't hit a null value at n-1 position
 		- creates a new node with value and null address
-		- 
+		- the new node's next address should be set to the address of n-1 position's next address value
+		- n-1 positions' next address value should be address of new node address
+		
+	* remove element (returns value and deletes element)
+		- receives an index value to access (n)
+		- uses while loop/counter to access n element, copies value to be returned to one variable, copies the 'next' address held at the position another variable.
+		- loops through again to n-1 element and sets the next address of n-1 to the copied next address of removed element
+		- returns variable with desired value (delete local variables created?)
+		
+	* return element (returns value at index without deleting it)
+		- receives an index value
+		- uses that index value for while loop to reach the desired element (not contiguous memory locations)
+		- returns the node->data value for that 
+		
