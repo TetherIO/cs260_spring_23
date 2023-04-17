@@ -107,11 +107,24 @@ Queue should hold int? values, should be somewhat dynamic, should follow FIFO or
 	* remove element (returns value and deletes element)
 		- receives an index value to access (n)
 		- uses while loop/counter to access n element, copies value to be returned to one variable, copies the 'next' address held at the position another variable.
+			* handles error if list is shorter in length than desired index value
 		- loops through again to n-1 element and sets the next address of n-1 to the copied next address of removed element
 		- returns variable with desired value (delete local variables created?)
 		
 	* return element (returns value at index without deleting it)
-		- receives an index value
+		- receives an index value (n)
 		- uses that index value for while loop to reach the desired element (not contiguous memory locations)
-		- returns the node->data value for that 
+			* handles error if nullptr is reached before index value n
+		- if applicable, returns the node->data value for the correct node at that position.
 		
+
+### Sequence of events
+
+1. node class/struct is created
+2. list class/struct is created
+3. main function is created
+4. a list object instantiated
+5. values added according to valid index positions, first value necessary at the first node, index = 0
+6. values removed from valid index positions
+7. values shown without removing at various positions
+
