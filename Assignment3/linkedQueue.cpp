@@ -6,6 +6,7 @@ struct Node {
     int data;
     Node* next;
 
+    // constructor instead of default values
     Node(int data) : data(data), next(nullptr){}
 };
 
@@ -19,7 +20,7 @@ public:
 
     void push(int newData) {
         Node *newNode = new Node(newData);
-        if (rear_ = nullptr){
+        if (rear_ == nullptr){
             rear_ = newNode;
             front_ = newNode;
             return;
@@ -35,18 +36,27 @@ public:
             return -1;  // return error message and -1 to signal error
         }
 
-        Node *holder = front_;
+        Node *holder = front_; // allows for deleting
         int data = front_->data;
         front_ = front_->next;
 
         if (front_ == nullptr){
-            rear_ = mullptr;
+            rear_ = nullptr;
         }
 
+        delete holder;
         return data;
 
     }
 
+    int peek() {
+        if (front_ == nullptr) {
+            cout << "Nothing to peek, queue is empty." << endl;
+            return -1;
+        }
+
+        return front_->data;
+    }
 };
 
 int main() {
