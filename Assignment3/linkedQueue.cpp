@@ -7,7 +7,7 @@ struct Node {
     Node* next;
 
     // constructor instead of default values
-    Node(int data) : data(data), next(nullptr){}
+    explicit Node(int data) : data(data), next(nullptr){}
 };
 
 class Queue {
@@ -18,6 +18,7 @@ private:
 public:
     Queue() : front_(nullptr), rear_(nullptr) {}
 
+    // aka enqueue from assignment instructions, similar to stack operation but modified for FIFO structure
     void push(int newData) {
         Node *newNode = new Node(newData);
         if (rear_ == nullptr){
@@ -29,6 +30,7 @@ public:
         rear_ = newNode;
     }
 
+    // aka dequeue from assignment instructions, similar to stack operation but modified for FIFO structure
     int pop(){
         // check for empty list
         if (front_ == nullptr) {
@@ -66,4 +68,23 @@ int main() {
     cout << "myQueue.pop(): " << myQueue.pop() << endl;
 
     myQueue.push(42);
+    myQueue.push(11);
+    myQueue.push(38);
+
+    cout << "myQueue.peek(): " << myQueue.peek() << endl;
+    cout << "myQueue.pop(): " << myQueue.pop() << endl;
+
+    myQueue.push(55);
+    myQueue.push(55);
+
+    cout << "myQueue.pop(): " << myQueue.pop() << endl;
+    cout << "myQueue.peek(): " << myQueue.peek() << endl;
+    cout << "myQueue.pop(): " << myQueue.pop() << endl;
+    cout << "myQueue.peek(): " << myQueue.peek() << endl;
+    cout << "myQueue.pop(): " << myQueue.pop() << endl;
+    cout << "myQueue.peek(): " << myQueue.peek() << endl;
+    cout << "myQueue.pop(): " << myQueue.pop() << endl;
+    cout << "myQueue.peek(): " << myQueue.peek() << endl;
+    cout << "myQueue.pop(): " << myQueue.pop() << endl;
+
 }
