@@ -28,6 +28,25 @@ public:
         rear_ = newNode;
     }
 
+    int dequeue(){
+        // check for empty list
+        if (front_ == nullptr) {
+            cout << "Nothing to dequeue, queue is empty." << endl;
+            return -1;  // return error message and -1 to signal error
+        }
+
+        Node *holder = front_;
+        int data = front_->data;
+        front_ = front_->next;
+
+        if (front_ == nullptr){
+            rear_ = mullptr;
+        }
+
+        return data;
+
+    }
+
 };
 
 int main() {
