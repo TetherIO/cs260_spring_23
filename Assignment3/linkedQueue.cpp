@@ -29,7 +29,7 @@ public:
         rear_ = newNode;
     }
 
-    int dequeue(){
+    int pop(){
         // check for empty list
         if (front_ == nullptr) {
             cout << "Nothing to dequeue, queue is empty." << endl;
@@ -65,5 +65,5 @@ int main() {
     cout << "myQueue.peek(): " << myQueue.peek() << endl;
     cout << "myQueue.pop(): " << myQueue.pop() << endl;
 
-    myQueue.push(42)
+    myQueue.push(42);
 }
